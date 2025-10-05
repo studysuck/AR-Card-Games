@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body, html, #app { height: 100%; margin: 0; font-family: system-ui, Arial, sans-serif; }
+.app-grid { display: grid; grid-template-columns: 240px 1fr; height: 100vh; }
+.cards-panel { background: #f4f4f8; padding: 12px; border-right: 1px solid #ddd; }
+.cards { display: flex; flex-direction: column; gap: 8px; }
+.card { background: white; padding: 8px; border: 1px solid #ccc; border-radius: 6px; cursor: grab; }
+.card:active { cursor: grabbing; }
+.view-panel { position: relative; background: #222; display: flex; flex-direction: column; }
+.camera { position: relative; flex: 1; background: linear-gradient(180deg,#333,#111); overflow: hidden; }
+.camera-overlay { position: absolute; inset: 0; display:flex; align-items:center; justify-content:center; color:#888; font-size:18px; pointer-events:none; }
+.hud { height: 140px; background: rgba(255,255,255,0.95); padding: 12px; border-top: 1px solid #ccc; }
+.character { position: absolute; width: 100px; height: 80px; background: linear-gradient(180deg,#fffbf0,#fff2e0); border-radius: 8px; border:1px solid #caa; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow: 0 4px 12px rgba(0,0,0,0.4); opacity: 0; }
+.char-name { font-weight: bold; font-size: 14px; }
+.hp-bar { width: 80%; height: 10px; background: #e6e6e6; border-radius: 6px; margin-top:6px; overflow: hidden; }
+.hp-fill { height: 100%; background: linear-gradient(90deg,#4caf50,#a5d6a7); width: 100%; transition: width 300ms ease; }
+.selected { display:flex; gap:12px; align-items:center; }
+.actions button { margin-right:8px; padding:6px 10px; }
+.combat-text { position:absolute; color: #fff; background: rgba(0,0,0,0.6); padding:4px 8px; border-radius:6px; transform: translateY(0); transition: transform 900ms ease, opacity 900ms; }
+.info { color:#333; }
